@@ -7,7 +7,7 @@ The files in the `js` and `css` directories are taken from the aforementioned Re
 ## Examples
 
 1. `Basic.html` -- Just bullet charts, and such. Does not need anything other than basic `reveal.js`
-2. `basicMarkdown.html` -- Shows how to use [Markdown]() internally to the HTML file for processing and rendering. This uses a markdown plugin for Reveal. Note that the order of inclusion of the JavaScript files is critical, i.e., it won't work if the JavaScript files are not in this order.
+2. `basicMarkdown.html` -- Shows how to use [Markdown](https://commonmark.org/) internally to the HTML file for processing and rendering. This uses a markdown plugin for Reveal. Note that the order of inclusion of the JavaScript files is critical, i.e., it won't work if the JavaScript files are not in this order.
 
 ## Examples to be Written
 
