@@ -14,9 +14,10 @@ body {
   background: #fff;
   background-color: #fff; }
 
+/* Changed font-size from 42 to 36 */
 .reveal {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: normal;
   color: #222; }
 
