@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <title>Basic Reveal Slides with Code Highlights</title>
+    <!-- Style and theme selection !-->
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/white.css">
+		<!-- Code Syntax Highlighting Stylesheet -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+      	<section>
+					<h2>Code Syntax Highlighting</h2>
+									<ul>
+										<li>Examples of Code Highlighting</li>
+										<li>JavaScript</li>
+										<li>CSS</li>
+										<li>HTML</li>
+									</ul>
+        </section>
+
+				<section>
+					<h2>JavaScript</h2>
+<pre><code class="hljs" data-trim>
+	students = document.querySelectorAll(".student-login h4")
+	for(student of students) {
+		console.log(student.innerHTML)
+	}
+	a = [];
+	for(student of students) {
+		a.push(student.innerHTML)
+	}
+</code></pre>
+				</section>
+
+				<section>
+					<h2>HTML</h2>
+<pre><code class="hljs" data-trim>
+	&lt;!DOCTYPE html&gt;
+	&lt;html lang=&quot;en&quot;&gt;
+		&lt;head&gt;
+			&lt;meta charset=&quot;utf-8&quot;&gt;
+</code></pre>
+				</section>
+
+				<section> <h2>CSS</h2>
+					<pre><code class="hljs" data-trim>
+h1 {
+	font-family:sans-serif;
+	text-align: center;
+}
+main {
+	margin: 2em;
+	border: purple 20px solid;
+	padding: 1em;
+	background-color: white;
+}
+body {
+		background-color: #cde2f5;
+}
+.question {
+	font-style: italic;
+}
+.answer {
+	color: blue;
+}
+					</code></pre>
+				</section>
+
+			</div>
+		</div>
+
+        <!-- The magic is done by the JavaScript below!-->
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'reveal/js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				]});
+		</script>
+	</body>
+</html>

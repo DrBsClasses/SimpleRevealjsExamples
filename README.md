@@ -7,12 +7,13 @@ The files in the `js` and `css` directories are taken from the aforementioned Re
 ## Examples
 
 1. `Basic.html` -- Just bullet charts, and such. Does not need anything other than basic `reveal.js`
-2. `basicMarkdown.html` -- Shows how to use [Markdown](https://commonmark.org/) internally to the HTML file for processing and rendering. This uses a markdown plugin for Reveal. Note that the order of inclusion of the JavaScript files is critical, i.e., it won't work if the JavaScript files are not in this order.
+2. `basicMarkdown.html` -- Shows how to use [Markdown](https://commonmark.org/) internally to the HTML file for processing and rendering. This uses a markdown plugin for Reveal. 
+3. `basicCode.html` -- Show how to include code samples with syntax highlighting.
+4. `markAndCode.html` -- Show how to use Markdown and code syntax highlighting.
 
 ## Examples to be Written
 
 1. Basic with Figures -- especially dealing with captions and figure size issues.
-2. Basic with Code highlighting
 3. The above with markdown.
 4. Probably should have "fragments" illustrated in the above. These are things like the incremental rendering of bullets in a bullet list.
 5. Maybe external markdown use.

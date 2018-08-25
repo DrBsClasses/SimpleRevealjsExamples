@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <title>Markdown and Code with Reveal</title>
+        <!-- Style and theme selection !-->
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/white.css">
+		<!-- Code Syntax Highlighting Stylesheet -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+      	<section data-markdown>
+        	<textarea data-template>
+## Reveal.js with Code Samples
+
+1. Syntax Highlighting Overview
+1. Without Markdown
+2. With Markdown
+3. HTML Escaping
+            </textarea>
+        </section>
+
+				<section data-markdown>
+        	<textarea data-template>
+## Reveal.js and Highlight.js
+
+* Reveal has built in support for [Highlight.js](https://highlightjs.org/)
+* Highlight.js supports 176 languages and 79 styles
+* See the top of this source file on including a highlight *stylesheet*
+* See the end of this file on how to activate the highlighter.
+            </textarea>
+        </section>
+
+				<section data-markdown><textarea data-template>
+## JavaScript Example
+
+```
+students = document.querySelectorAll(".student-login h4")
+for(student of students) {
+	console.log(student.innerHTML)
+}
+a = [];
+for(student of students) {
+	a.push(student.innerHTML)
+}
+```
+        </textarea></section>
+
+				<section data-markdown>
+        	<textarea data-template>
+## CSS Example
+
+```
+h1 {
+	font-family:sans-serif;
+	text-align: center;
+}
+main {
+	margin: 2em;
+	border: purple 20px solid;
+	padding: 1em;
+	background-color: white;
+}
+body {
+		background-color: #cde2f5;
+}
+.question {
+	font-style: italic;
+}
+.answer {
+	color: blue;
+}
+```
+          </textarea>
+        </section>
+
+				<section data-markdown><textarea data-template>
+## HTML Escaping
+
+* When trying to display HTML code in an HTML page the browser will get confused
+when it sees *element* definitions, i.e., things like `<p>`.
+* To solve this the characters `<` and `>` and a few others need to be represented
+in another way.
+* This is done with the character encodings `&amp;lt;`, `&amp;gt;` and others.
+        </textarea></section>
+
+				<section data-markdown><textarea data-template>
+## HTML Escaping II
+
+* When working with Reveal in HTML you must *escape* the code before you put it
+in the HTML file, otherwise it will break the page.
+* There are a number of online tools, libraries, and techniques to do this *escaping*.
+Just search for *HTML escaping*.
+* When working with Markdown in Reveal this escaping is not necessary.
+        </textarea></section>
+
+				<section data-markdown><textarea data-template>
+## HTML Example
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<!-- html is the "root" element it can have
+     one "head" and one "body" element -->
+<head>
+  <meta charset="utf-8">
+```
+        </textarea></section>
+
+			</div> <!-- End of slide section -->
+		</div>
+    <!-- The first of these scripts helps reveal load the plugin scripts !-->
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+		<script>
+		  /* You can specify Reveal options below. */
+			Reveal.initialize(
+				{
+				dependencies: [
+					{ src: 'reveal/js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				]
+			}
+			);
+		</script>
+	</body>
+</html>

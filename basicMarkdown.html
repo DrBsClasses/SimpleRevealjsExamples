@@ -1,9 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8">
         <title>Basic Markdown with Reveal</title>
         <!-- Style and theme selection !-->
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/white.css">
 
 	</head>
 	<body>
@@ -18,7 +20,7 @@
 3. I guess we can use that!
                     </textarea>
                 </section>
-                
+
 				<section data-markdown>
                     <textarea data-template>
 ## To Dos:
@@ -29,15 +31,22 @@
 4. Create examples of code highlighting in HTML and Markdown
                     </textarea>
                 </section>
-				
+
 			</div>
 		</div>
-        <!-- Note that the ordering of the script inclusion below matters!!! !-->
-		<script src="js/reveal.js"></script>
-        <script src="js/plugin/markdown/marked.js"></script>
-        <script src="js/plugin/markdown/markdown.js"></script>
+    <!-- The first of these scripts helps reveal load the plugin scripts !-->
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
 		<script>
-			Reveal.initialize();
+		  /* You can specify Reveal options below. */
+			Reveal.initialize(
+				{
+				dependencies: [
+					{ src: 'reveal/js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				]
+			}
+			);
 		</script>
 	</body>
 </html>
