@@ -1,10 +1,18 @@
-# Simple Reveal.js Examples
+# Reveal.js Lecture Examples
 Simple examples to illustrate Reveal.js usage for generating course slides.
-These examples are currently based on [release 3.6](https://github.com/hakimel/reveal.js/releases/tag/3.6.0) of [Reveal.js](https://revealjs.com/#/).
+These examples are currently based on [release 3.6](https://github.com/hakimel/reveal.js/releases/tag/3.6.0) of [Reveal.js](https://revealjs.com/#/), however, we will rename the Reveal release directory from something like `reveal.js-3.6.0` to just `reveal` so that the bulk of our work is independent of version.
 
-The files in the `js` and `css` directories are taken from the aforementioned Reveal release. We only include the minimum of these files to enable our examples to work. This way students know the minimum amount of extra files needed for their online presentations.
+Currently in our `reveal` directory is a minimal subset of the Reveal release needed for these demonstrations.
 
-## Examples
+## Directory Structuring
+
+A course will typically contain many topics, lectures will tend to be grouped into these topics, and each lecture may contain supplementary files, images, demonstration code. Hence to avoid a mess of files we group lecture materials into directories that are at the same level as the `reveal` directory. This affects how we reference the Reveal JavaScript and CSS resources from our slides.
+
+We put our examples in the `LectureSlides` directory. You would come up with a descriptive name for your own directory based on the topic of the lecture(s).
+
+## Lecture Slide Examples
+
+In the `LectureSlides` directory you will find:
 
 1. `Basic.html` -- Just bullet charts, and such. Does not need anything other than basic `reveal.js`
 2. `basicMarkdown.html` -- Shows how to use [Markdown](https://commonmark.org/) internally to the HTML file for processing and rendering. This uses a markdown plugin for Reveal. 
@@ -14,9 +22,9 @@ The files in the `js` and `css` directories are taken from the aforementioned Re
 ## Examples to be Written
 
 1. Basic with Figures -- especially dealing with captions and figure size issues.
-3. The above with markdown.
-4. Probably should have "fragments" illustrated in the above. These are things like the incremental rendering of bullets in a bullet list.
-5. Maybe external markdown use.
+2. The above with markdown.
+3. Probably should have "fragments" illustrated in the above. These are things like the incremental rendering of bullets in a bullet list.
+4. Maybe external markdown use.
 
 ## Issues and Fixes
 

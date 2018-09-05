@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
         <title>Markdown and Code with Reveal</title>
         <!-- Style and theme selection !-->
-		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/white.css">
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/white.css">
 		<!-- Code Syntax Highlighting Stylesheet -->
-		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
 
 	</head>
 	<body>
@@ -114,16 +114,16 @@ Just search for *HTML escaping*.
 			</div> <!-- End of slide section -->
 		</div>
     <!-- The first of these scripts helps reveal load the plugin scripts !-->
-		<script src="reveal/lib/js/head.min.js"></script>
-		<script src="reveal/js/reveal.js"></script>
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
 		<script>
 		  /* You can specify Reveal options below. */
 			Reveal.initialize(
 				{
 				dependencies: [
-					{ src: 'reveal/js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal/js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 				]
 			}
 			);
